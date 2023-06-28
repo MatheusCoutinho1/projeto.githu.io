@@ -1,0 +1,271 @@
+/* Estilos para o corpo do site */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+/* Estilos para o cabeçalho da página */
+
+  header {
+    background-color: #00BFFF;
+    color: #fff;
+    padding: 25px;
+  }
+
+  .navigation li:first-child a.logo {
+    font-size: 25px;
+  }  
+  .navigation {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+  }
+  
+  .navigation li {
+    margin-right: 20px;
+  }
+  
+  .navigation li:last-child {
+    margin-right: 0;
+  }
+  
+  .navigation a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    position: relative;
+  }
+  
+  .navigation a:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #222;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .navigation a:hover:before {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+
+/* Estilos para o rodapé da página */
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #00BFFF;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  footer p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+/* Tabela de livros */
+
+  .book-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .book {
+    width: 30%;
+    margin-bottom: 20px;
+  }
+  
+  .book img {
+    width: 37%;
+    height: auto;
+  }
+  
+  .book p {
+    text-align: center;
+    margin-top: 5px;
+  }
+  
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+/* tela de login */
+
+  .login-container {
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: center;
+  }
+  
+  .login-container label,
+  .login-container input {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .login-container button {
+    margin-top: 20px;
+  }
+  
+  .login-container {
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: center;
+  }
+  
+  .login-container label,
+  .login-container input {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  
+  .login-container input[type="text"],
+  .login-container input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .login-container button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #00BFFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .login-container button:hover {
+    background-color: #00BFFF;
+  }
+
+  /* CSS para alinhar elementos à direita */
+  .right-align {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Estilos para o link "Sair" */
+  .navigation-item {
+    margin-left: 10px;
+    text-decoration: none;
+    color: #000;
+  }
+  .content {
+    margin-top: 20px;
+    margin-left: 100px;
+    margin-bottom: 10px;
+  }
+  .book-details-container {
+    display: flex;
+    align-items: space-between;
+    justify-content: flex-start;
+  }
+  .book-image {
+    width: 300px;
+    height: auto;
+    margin-right: 100px;
+  }
+  .book-details {
+    color: #777;
+    font-size: 16px;
+    flex-grow: 10;
+  }
+  .book-details p {
+    margin-bottom: 10px;
+  }
+  .book-details button {
+    background-color: #777;
+    color: white;
+    padding: 5px 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  thead th {
+    border-top: 2px solid #ddd;
+  }
+  
+  tbody tr:first-child td {
+    border-top: 2px solid #ddd;
+  }
+  .editar-devolucao {
+    background-color: #777;
+    color: white;
+    padding: 5px 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  .titulo-livros {
+    color: #555353;
+  }
+  .coluns {
+    color: #555353;
+  }
+  .content {
+    color: #555353;
+  }
+  .centered-paragraph {
+    text-align: left;
+    margin: 20px auto;
+    max-width: 800px;
+    font-size: medium;
+  }
+  .titulo-apresentacao {
+    text-align: center;
+  }
+  .image-container {
+        display: flex;
+        justify-content: center;
+  }
+    
+  .image-container img {
+        max-width: 100%;
+        height: auto;
+  }

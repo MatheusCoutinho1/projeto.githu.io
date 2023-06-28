@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biblioteca</title>
+  <link rel="stylesheet" href="CSS/styles.css">
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul class="navigation">
+        <li><a href="inicio.html">Início</a></li>
+        <li><a href="livros.html">Livros</a></li>
+        <li><a href="controle-emprestimo.html">Meus Livros</a></li>
+        <li class="right-align">Aluno(a)</li>
+        <li class="right-align navigation-item"><a href="index.html">Sair</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="content">
+    <p><strong>Meus Livros:</strong></p>
+    <table id="livros-reservados">
+      <thead>
+        <tr class="coluns">
+          <th>Nome</th>
+          <th>Data da reserva</th>
+          <th>Data de devolução</th>
+          <th>Alterar data de devolução</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>O menino maluquinho</td>
+          <td>29/06/2023</td>
+          <td>06/07/2023</td>
+          <td><button class="editar-devolucao" onclick="alterarDataDevolucao(this)">Alterar</button></td>
+        </tr>
+        <tr>
+          <td>A culpa é das estrelas</td>
+          <td>29/06/2023</td>
+          <td>06/07/2023</td>
+          <td><button class="editar-devolucao" onclick="alterarDataDevolucao(this)">Alterar</button></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p><strong>Livros Reservados:</strong></p>
+    <table id="livros-reservados">
+      <thead>
+        <tr class="coluns">
+          <th>Nome</th>
+          <th>Status</th>
+          <th>Recado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>O menino que olhava para o céu</td>
+          <td>Indisponível</td>
+          <td>Assim que o livro estiver disponível, você será avisado através do seu e-mail.</td>
+        </tr>
+        <tr>
+          <td>Harry Potter e as Relíquias da Morte</td>
+          <td>Indisponível</td>
+          <td>Assim que o livro estiver disponível, você será avisado através do seu e-mail.</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+  <footer>
+    <p>© ISEPAM 2023</p>
+  </footer>
+</body>
+
+</html>

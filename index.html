@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Biblioteca</title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <script>
+    function redirecionar() {
+      var nome = document.getElementById("nome").value;
+      var senha = document.getElementById("senha").value;
+
+      // Verifica as credenciais de login (pode ser uma lógica mais elaborada)
+      if (nome === "99999999999" && senha === "123456") {
+        // Redireciona para a página livros.html
+        window.location.href = "inicio.html";
+      } else {
+        // Exibe uma mensagem de erro caso as credenciais sejam inválidas
+        alert("Credenciais inválidas. Tente novamente.");
+      }
+
+      // Impede o envio do formulário
+      return false;
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul class="navigation">
+        <li><a href="index.html" class="logo">FAETEC</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="login-container">
+    <h1>Login</h1>
+    <form onsubmit="return redirecionar()">
+      <label for="nome">Usuário:</label>
+      <input type="text" id="nome" placeholder="CPF" required>
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" placeholder="Senha" required>
+      <button type="submit">Entrar</button>
+    </form>
+  </div>
+  <footer>
+    <p>© ISEPAM 2023</p>
+  </footer>
+</body>
+</html>

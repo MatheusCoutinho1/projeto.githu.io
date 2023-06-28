@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biblioteca</title>
+  <link rel="stylesheet" href="CSS/styles.css">
+</head>
+
+<body>
+  <header>
+      <nav>
+          <ul class="navigation">
+              <li><a href="inicio.html">Início</a></li>
+              <li><a href="livros.html">Livros</a></li>
+              <li><a href="controle-emprestimo.html">Meus Livros</a></li>
+              <li class="right-align">Aluno(a)</li>
+              <li class="right-align navigation-item"><a href="index.html">Sair</a></li>
+          </ul>
+      </nav>
+  </header>
+<main>
+    <section>
+      <h1 class="titulo-livros">Confira alguns de nossos livros:</h1>
+      <div class="book-list">
+        <div class="book">
+          <img src="images/omeninomaluquinho.jpg" alt="O menino maluquinho" class="center" onclick="redirecionarLivro ('meninomaluquinho')">
+        </div>
+        <div class="book">
+          <img src="images/culpaedasestrelas.jpg" alt="A culpa é das estrelas" class="center" onclick="redirecionarLivro('culpaedasestrelas')">
+        </div>
+        <div class="book">
+          <img src="images/Omeninoqueolhavaparaoceu.jpg" alt="O menino que olhava para o céu" class="center" onclick="redirecionarLivro('omeninoqueolhavaparaoceu')">
+        </div>
+        <div class="book">
+          <img src="images/hp7.jpg" alt="Harry Potter e as relíquias da morte" class="center" onclick="redirecionarLivro('hp7')">
+        </div>
+        <div class="book">
+          <img src="images/pedagodiasocial.jpg" alt="Pedagogia social " class="center" onclick="redirecionarLivro('pedagodiasocial')">
+        </div>
+        <div class="book">
+            <img src="images/narnia.jpg" alt="As Cronicas de Narnia" class="center" onclick="redirecionarLivro('narnia')">
+          </div>
+          <div class="book">
+            <img src="images/pedagodia.jpg" alt="Pedagodia da autonomia" class="center" onclick="redirecionarLivro('pedagodia')">
+          </div>
+          <div class="book">
+            <img src="images/pedagodiadoamor.jpg" alt="Pedagodia do amor" class="center" onclick="redirecionarLivro('pedagodiadoamor')">
+          </div>
+          <div class="book">
+            <img src="images/oquetematrasdaporta.webp" alt="O que tem atrás da porta" class="center" onclick="redirecionarLivro('oquetematrasdaporta')">
+          </div>
+        <!-- Repita os blocos .book para os outros livros -->
+      </div>
+      <p>Caso deseja ver a lista completa de livros disponíveis, Clique aqui.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© ISEPAM 2023</p>
+  </footer>
+</body>
+
+</html>
+<script>
+  function redirecionarLivro(livro) {
+    window.location.href = "detalhes-livro.html?livro=" + livro;
+  }
+</script>
+

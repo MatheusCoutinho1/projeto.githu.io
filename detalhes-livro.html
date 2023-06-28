@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biblioteca</title>
+  <link rel="stylesheet" href="CSS/styles.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul class="navigation">
+        <li><a href="inicio.html">Início</a></li>
+        <li><a href="livros.html">Livros</a></li>
+        <li><a href="controle-emprestimo.html">Meus Livros</a></li>
+        <li class="right-align">Aluno(a)</li>
+        <li class="right-align navigation-item"><a href="index.html">Sair</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="content">
+    <section>
+      <div class="book-details-container">
+        <div class="book-image-container">
+          <img class="book-image" id="book-image" src="" alt="Livro">
+        </div>
+        <div class="book-details" id="livro-info"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© ISEPAM 2023</p>
+  </footer>
+
+  <script>
+    // Obtém o parâmetro "livro" da URL
+    const params = new URLSearchParams(window.location.search);
+    const livro = params.get('livro');
+
+    // Verifica qual livro foi selecionado e exibe as informações correspondentes
+    if (livro === 'culpaedasestrelas') {
+      exibirDetalhesLivro(
+        'images/culpaedasestrelas.jpg',
+        'A culpa é das estrelas',
+        'John Green',
+        '2012',
+        'Disponível',
+        'Hazel Grace Lancaster, uma paciente terminal de 16 anos, conhece Augustus Waters em um grupo de apoio a jovens com câncer. Juntos, eles embarcam em uma jornada inesquecível, repleta de amor, esperança e os desafios que a vida apresenta.'
+      );
+    } else if (livro === 'hp7') {
+      exibirDetalhesLivro(
+        'images/hp7.jpg',
+        'Harry Potter e as Relíquias da Morte',
+        'J.K. Rowling',
+        '2007',
+        'Indisponível',
+        'No sétimo e último livro da série Harry Potter, Harry e seus amigos Hermione e Ron se preparam para a batalha final contra Lord Voldemort. Eles enfrentarão perigos, sacrifícios e descobrirão segredos que podem mudar o destino do mundo dos bruxos.'
+      );
+    } else if (livro === 'narnia') {
+      exibirDetalhesLivro(
+        'images/narnia.jpg',
+        'As Crônicas de Nárnia',
+        'C.S. Lewis',
+        '1950',
+        'Disponível',
+        'Nesta série de livros, os irmãos Pevensie descobrem um guarda-roupa mágico que os transporta para o mundo de Nárnia. Lá, eles embarcam em aventuras extraordinárias, conhecem criaturas místicas e enfrentam desafios que testam sua coragem e lealdade.'
+      );
+    } else if (livro === 'pedagodia') {
+      exibirDetalhesLivro(
+        'images/pedagodia.jpg',
+        'Pedagogia da Autonomia',
+        'Paulo Freire',
+        '1996',
+        'Indisponível',
+        'Nesta obra, o renomado educador Paulo Freire discute a importância da autonomia e da emancipação do aluno no processo de aprendizagem. Ele aborda questões pedagógicas, políticas e sociais, visando à formação de indivíduos críticos e conscientes.'
+      );
+    } else if (livro === 'pedagodiadoamor') {
+      exibirDetalhesLivro(
+        'images/pedagodiadoamor.jpg',
+        'Pedagogia do Amor',
+        'Rubem Alves',
+        '2003',
+        'Disponível',
+        'Rubem Alves, escritor e educador, reflete sobre a importância do amor no contexto da educação. Ele apresenta ideias e experiências que destacam a relação afetiva entre educadores e alunos, mostrando como o amor pode transformar o processo de ensino-aprendizagem.'
+      );
+    } else if (livro === 'pedagodiasocial') {
+      exibirDetalhesLivro(
+        'images/pedagodiasocial.jpg',
+        'Pedagogia Social',
+        'João Francisco Ribeiro',
+        '2010',
+        'Disponível',
+        'Neste livro, João Francisco Ribeiro explora a pedagogia social como uma abordagem educacional voltada para a transformação social. Ele discute conceitos, práticas e desafios dessa área, buscando promover a inclusão, a cidadania e a justiça social por meio da educação.'
+      );
+    } else if (livro === 'meninomaluquinho') {
+      exibirDetalhesLivro(
+        'images/omeninomaluquinho.jpg',
+        'O Menino Maluquinho',
+        'Ziraldo',
+        '1980',
+        'Disponível',
+        'Ziraldo narra as aventuras do Menino Maluquinho, um garoto cheio de imaginação e alegria. Com sua turma de amigos, ele vive momentos divertidos, descobertas e aprendizados, mostrando a importância de ser autêntico e valorizar a infância.'
+      );
+    } else if (livro === 'omeninoqueolhavaparaoceu') {
+      exibirDetalhesLivro(
+        'images/Omeninoqueolhavaparaoceu.jpg',
+        'O Menino que Olhava para o Céu',
+        'Hugo Fabrício de Medeiros',
+        '2016',
+        'Indisponível',
+        'Este livro conta a história de um menino curioso que encontra na observação do céu uma fonte de encantamento e aprendizado. Com sua imaginação, ele explora o universo, faz descobertas fascinantes e desperta a curiosidade por ciência e astronomia.'
+      );
+    } else if (livro === 'oquetematrasdaporta') {
+      exibirDetalhesLivro(
+        'images/oquetematrasdaporta.webp',
+        'O que tem atrás da porta?',
+        'Luiz Fernando Veríssimo',
+        '2015',
+        'Disponível',
+        'Neste livro, Luiz Fernando Veríssimo apresenta uma coletânea de crônicas e contos que abordam temas diversos, como amor, humor, política e cotidiano. Com seu estilo leve e envolvente, o autor nos convida a refletir sobre a vida e suas peculiaridades.'
+      );
+    }
+
+    // Função para exibir os detalhes do livro na página
+    function exibirDetalhesLivro(imagem, titulo, autor, ano, status, descricao) {
+      const livroInfoContainer = document.getElementById('livro-info');
+      const bookImage = document.getElementById('book-image');
+      
+      bookImage.src = imagem;
+      livroInfoContainer.innerHTML = `
+        <h2>${titulo}</h2>
+        <p><strong>Autor:</strong> ${autor}</p>
+        <p><strong>Ano:</strong> ${ano}</p>
+        <p><strong>Status:</strong> ${status}</p>
+        <p><strong>Descrição:</strong> ${descricao}</p>
+        <div class="reservation-container">
+          <label for="reservation-date"><strong>Data de Reserva:</strong></label>
+          <input type="date" id="reservation-date">
+          <button class="reserve-button" onclick="reservarLivro('${titulo}')">Reservar</button>
+        </div>
+      `;
+    }
+
+    // Função para redirecionar para a página de controle e criar uma tabela com o livro reservado
+    function reservarLivro(titulo) {
+      // Redireciona para a página de controle
+      window.location.href = 'controle-emprestimo.html';
+
+      // Obtém a data de reserva inserida pelo usuário
+      const reservationDateInput = document.getElementById('reservation-date');
+      const reservationDate = reservationDateInput.value;
+
+      // Cria a tabela com o livro reservado (essa parte só funcionará na página de controle)
+      const tabela = document.getElementById('tabela-reservas');
+      const newRow = tabela.insertRow(-1);
+      const titleCell = newRow.insertCell(0);
+      const dateCell = newRow.insertCell(1);
+      titleCell.innerHTML = titulo;
+      dateCell.innerHTML = reservationDate;
+    }
+  </script>
+</body>
+</html>
